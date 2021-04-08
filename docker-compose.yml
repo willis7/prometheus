@@ -26,6 +26,8 @@ services:
       - cadvisor:cadvisor
       - alertmanager:alertmanager
 #      - pushgateway:pushgateway
+    extra_hosts:
+      - "host.docker.internal:supermicro.localdomain"
     depends_on:
       - cadvisor
 #      - pushgateway
